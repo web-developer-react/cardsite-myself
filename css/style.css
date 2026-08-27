@@ -1,0 +1,57 @@
+.margin-zero{
+    margin:0px;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.font-header{
+    background-image: linear-gradient(to left, #553c9a 45%, #b393d3 90%); /* позволяет добавлять специфические параметры, в том числе направление градиента и как минимум два значения цвета */
+    /* background-image: radial-gradient(circle, #553c9a, #ee4b2b); /* не выйдет за пределы круга */
+    /* background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a); /* градиент тоже начинается с исходной точки. Вокруг неё вращается цветовой переход */
+
+    color: transparent; /* фон видно прямо за заголовком */
+    
+    background-clip: text; /* гарантирует, что фон не выйдет за пределы элемента — в данном случае это текста */
+    -webkit-background-clip: text; /* определяет область рисования фона */
+
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+#font-view-logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+
+.left-img{
+    /* cвойство float CSS указывает, что элемент должен быть взят из нормального потока и помещён вдоль левой или правой стороны его контейнера, где текст и встроенные элементы будут обтекать его */
+    float: left; /* выравниваем по левому краю */
+    margin: 10px 10px 10px 0; /* настраиваем отступы вокруг картинки */
+}
+
+.center-img{
+    display: block;
+    margin: 0 auto;
+}
+
+.margin-parent{
+    background:blueviolet; /* цвет фона */
+    margin: 1%; /* отступы вокруг элемента */
+    border: 10px solid slategray; /* параметры рамки */
+    border-style: groove; /* стиль границы */
+    padding: 15px; /* поля вокруг текста */
+}
+.margin-child{
+    background: white; /* цвет фона */
+    margin: 0px; /* отступы вокруг элемента */
+    border: 10px solid silver; /* параметры рамки */
+    border-style: inherit; /* наследует от родителя */
+    border-radius: 5px; /* уголки закруглены*/
+    padding: 5px; /* поля вокруг текста */
+}
+
