@@ -1,67 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- Страница «Myself»: разметка содержимого и подключение нужных ресурсов. -->
+
+<!-- lang: Указывает язык содержимого для произношения и правил обработки текста. -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Настройки документа: кодировка, заголовок, метаданные и подключения ресурсов. -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Задаёт служебные сведения для браузера и поисковых систем. charset: Указывает кодировку документа. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- http-equiv: Задаёт директиву обработки документа через метаданные. content: Содержит значение метаданных, назначение которых задаёт name или http-equiv. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Задаёт служебные сведения для браузера и поисковых систем. name: Задаёт имя передаваемого поля; одинаковое имя объединяет радиокнопки. -->
+    <!-- Задаёт название вкладки браузера. -->
     <title>Myself</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Подключает таблицу стилей по пути из href; относительный путь отсчитывается от HTML-файла. -->
+    <link rel="stylesheet" href="../css/style.css" /> <!-- rel: Объясняет отношение ссылки к текущему документу. href: Указывает адрес перехода или подключаемого ресурса. -->
 
+    <!-- Встроенные CSS-правила для этой страницы. -->
     <style>
-        body{ background-color: yellowgreen; }
-        
-        a{ text-decoration: none; } /* отменяем подчеркивание у ссылки */
+      body {
+        background-color: yellowgreen; /* Цвет заливки фона. */
+      }
 
-        hr{
-            border: none; /* убираем границу для браузера Firefox */
-            height: 10px; /* толщина линии */
-            background-color:rgb(131, 89, 170);
-        }
+      a {
+        text-decoration: none; /* Убирает стандартное подчёркивание ссылок. */
+      } /* отменяем подчеркивание у ссылки */
+
+      hr {
+        border: none; /* убираем границу для браузера Firefox */
+        height: 10px; /* толщина линии */
+        background-color: rgb(131, 89, 170); /* Цвет заливки фона. */
+      }
     </style>
-</head>
-<body class="margin-zero">
+  </head>
+  <!-- Содержит отображаемую страницу и её элементы управления. class: Связывает элемент с CSS-селекторами и поиском в JavaScript. -->
+  <body class="margin-zero">
+    <!-- Шапка страницы или раздела: название и связанные элементы навигации. -->
     <header>
-        <a href="https://apps.skillfactory.ru/" title="Добро пожаловать" target="_blank"><p class="font-header text-align-center" id="font-view-logo">SkillFactory</p></a>
-        <h1 class="font-header text-align-center">Kyryl Petrash</h1>
-        <hr>
+      <!-- Создаёт ссылку; адрес или якорь назначения задаёт href. title: Добавляет текстовую подсказку. target: Выбирает контекст открытия ссылки; _blank открывает новый. -->
+      <a
+        href="https://apps.skillfactory.ru/"
+        title="Добро пожаловать"
+        target="_blank"
+        ><!-- Обозначает отдельный абзац. id: Даёт элементу идентификатор для якоря, подписи, CSS или JavaScript. --><p class="font-header text-align-center" id="font-view-logo"
+          >SkillFactory</p
+        ></a
+      >
+      <!-- Задаёт заголовок первого уровня. -->
+      <h1 class="font-header text-align-center">Kyryl Petrash</h1>
+      <!-- Разделяет темы. -->
+      <hr />
     </header>
 
+    <!-- Основное содержимое страницы. -->
     <main>
-        <div>
-            <a href="https://www.youtube.com/watch?v=0-7IHOXkiV8" title="Click at me!">
-                <img src="https://th.bing.com/th/id/OIP.VhhXdjoX8qZKIPr7cLpYOgHaE8?pid=ImgDet&rs=1" alt="picture" width="250px" height="150px" class="center-img">
-            </a>
-            
+      <!-- Группирует элементы для оформления и работы сценария, не добавляя отдельного смыслового значения. -->
+      <div>
+        <a
+          href="https://www.youtube.com/watch?v=0-7IHOXkiV8"
+          title="Click at me!"
+        >
+          <!-- Подключает изображение; его текстовую замену задаёт alt. src: Указывает адрес загружаемого ресурса. alt: Даёт текстовую замену картинки; пустая строка обозначает декоративное изображение. width: Задаёт ширину в правилах этого элемента; у изображения помогает заранее определить место. height: Задаёт высоту в правилах этого элемента; у изображения помогает заранее определить место. -->
+          <img
+            src="https://th.bing.com/th/id/OIP.VhhXdjoX8qZKIPr7cLpYOgHaE8?pid=ImgDet&rs=1"
+            alt="picture"
+            width="250px"
+            height="150px"
+            class="center-img"
+          />
+        </a>
+      </div>
+      <div class="margin-parent">
+        <div class="margin-child">
+          <!-- Задаёт заголовок раздела второго уровня. Встроенные стили. color: Задаёт цвет текста; его также могут использовать рамки и значки через currentColor.. margin-top: Задаёт внешний отступ сверху.. text-align: Выравнивает строчное содержимое внутри блока.. -->
+          <h2 style="color: blueviolet; margin-top: 30px; text-align: center"
+            >How I become a developer</h2
+          >
+          <!-- Выделяет самостоятельный материал или карточку. -->
+          <article>
+            <!-- Объединяет элементы неупорядоченного списка. Встроенные стили. font-size: Задаёт размер текста.. -->
+            <ul style="font-size: 30px">
+              <!-- Задаёт один пункт списка. -->
+              <li><!-- Визуально выделяет текст без дополнительной важности. --><b>April 27</b> started learning HTML</li>
+              <li
+                ><b>May 04</b> finished training with introductory sections</li
+              >
+              <li
+                ><b>May 06</b> started the section &quot;Website layout&quot;
+                <!-- Объединяет пункты последовательности с нумерацией. -->
+                <ol>
+                  <li>Completed by <!-- Ставит смысловое ударение. --><em>Task 1</em></li>
+                  <li>Completed by <em>Task 2</em></li>
+                  <li>Completed by <em>Task 3</em></li>
+                </ol>
+              </li>
+              <li><b>May 14</b> completed the 5th module</li>
+              <li><b>May 17</b> made up a practical task</li>
+            </ul>
+          </article>
         </div>
-        <div class="margin-parent">
-            <div class="margin-child">
-                <h2 style="color:blueviolet; margin-top: 30px; text-align: center;">How I become a developer</h2>
-                <article>
-                    <ul style="font-size: 30px;">
-                        <li><b>April 27</b> started learning HTML</li>
-                         <li><b>May 04</b> finished training with introductory sections</li>
-                         <li><b>May 06</b> started the section &quot;Website layout&quot;
-                             <ol>
-                                 <li>Completed by <em>Task 1</em></li>
-                                 <li>Completed by <em>Task 2</em></li>
-                                 <li>Completed by <em>Task 3</em></li>
-                             </ol>
-                         </li>
-                         <li><b>May 14</b> completed the 5th module</li>
-                         <li><b>May 17</b> made up a practical task</li>
-                    </ul>
-                </article>
-             
-            </div>
-        </div>
-       <div>
-        <iframe src="https://yandex.ru/maps" frameborder ="1" name="Подсказка" width="100%" height="300px"></iframe>
-       </div>
+      </div>
+      <div>
+        <!-- Встроенный отдельный документ; его адрес задаётся атрибутом src. -->
+        <!-- frameborder: Устаревший атрибут рамки встроенного документа. -->
+        <iframe
+          src="https://yandex.ru/maps"
+          frameborder="1"
+          name="Подсказка"
+          width="100%"
+          height="300px"
+        ></iframe>
+      </div>
     </main>
+    <!-- Нижняя часть страницы: дополнительные ссылки и сведения. -->
     <footer class="text-align-center">
-        <hr>
-        <span style="font-size: 30px; color: blueviolet;">&copy;&nbsp;By Petrash</span>
+      <hr />
+      <!-- Выделяет часть строки для оформления или обращения из JavaScript. -->
+      <span style="font-size: 30px; color: blueviolet"
+        >&copy;&nbsp;By Petrash</span
+      >
     </footer>
-</body>
+  </body>
 </html>

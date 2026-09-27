@@ -1,57 +1,56 @@
-.margin-zero{
-    margin:0px;
+/* Таблица стилей страницы: оформление элементов и пояснения к используемым CSS-свойствам. */
+.margin-zero {
+  margin: 0px; /* Внешние отступы между элементом и соседями. */
 }
 
-.text-align-center{
-    text-align: center;
+.text-align-center {
+  text-align: center; /* Выравнивание текста внутри блока. */
 }
 
-.font-header{
-    background-image: linear-gradient(to left, #553c9a 45%, #b393d3 90%); /* позволяет добавлять специфические параметры, в том числе направление градиента и как минимум два значения цвета */
-    /* background-image: radial-gradient(circle, #553c9a, #ee4b2b); /* не выйдет за пределы круга */
-    /* background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a); /* градиент тоже начинается с исходной точки. Вокруг неё вращается цветовой переход */
+.font-header {
+  background-image: linear-gradient(to left, #553c9a 45%, #b393d3 90%); /* позволяет добавлять специфические параметры, в том числе направление градиента и как минимум два значения цвета */
+  /* background-image: radial-gradient(circle, #553c9a, #ee4b2b); /* не выйдет за пределы круга */
+  /* background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a); /* градиент тоже начинается с исходной точки. Вокруг неё вращается цветовой переход */
 
-    color: transparent; /* фон видно прямо за заголовком */
-    
-    background-clip: text; /* гарантирует, что фон не выйдет за пределы элемента — в данном случае это текста */
-    -webkit-background-clip: text; /* определяет область рисования фона */
+  color: transparent; /* фон видно прямо за заголовком */
 
-    margin-top: 1%;
-    margin-bottom: 0%;
+  background-clip: text; /* гарантирует, что фон не выйдет за пределы элемента — в данном случае это текста */
+  -webkit-background-clip: text; /* определяет область рисования фона */
+
+  margin-top: 1%; /* Внешний отступ сверху. */
+  margin-bottom: 0%; /* Внешний отступ снизу. */
 }
 
-#font-view-logo{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-    font-weight: bold;
-    font-size: 50px;
+#font-view-logo {
+  font-family: Georgia, "Times New Roman", Times, serif; /* Список шрифтов по порядку предпочтения. */
+  font-style: oblique; /* Начертание текста. */
+  font-weight: bold; /* Толщина букв. */
+  font-size: 50px; /* Размер текста. */
 }
 
-
-.left-img{
-    /* cвойство float CSS указывает, что элемент должен быть взят из нормального потока и помещён вдоль левой или правой стороны его контейнера, где текст и встроенные элементы будут обтекать его */
-    float: left; /* выравниваем по левому краю */
-    margin: 10px 10px 10px 0; /* настраиваем отступы вокруг картинки */
+.left-img {
+  /* cвойство float CSS указывает, что элемент должен быть взят из нормального потока и помещён вдоль левой или правой стороны его контейнера, где текст и встроенные элементы будут обтекать его */
+  float: left; /* выравниваем по левому краю */
+  margin: 10px 10px 10px 0; /* настраиваем отступы вокруг картинки */
 }
 
-.center-img{
-    display: block;
-    margin: 0 auto;
+.center-img {
+  display: block; /* Показывает элемент как блок. */
+  margin: 0 auto; /* Внешние отступы между элементом и соседями. */
 }
 
-.margin-parent{
-    background:blueviolet; /* цвет фона */
-    margin: 1%; /* отступы вокруг элемента */
-    border: 10px solid slategray; /* параметры рамки */
-    border-style: groove; /* стиль границы */
-    padding: 15px; /* поля вокруг текста */
+.margin-parent {
+  background: blueviolet; /* цвет фона */
+  margin: 1%; /* отступы вокруг элемента */
+  border: 10px solid slategray; /* параметры рамки */
+  border-style: groove; /* стиль границы */
+  padding: 15px; /* поля вокруг текста */
 }
-.margin-child{
-    background: white; /* цвет фона */
-    margin: 0px; /* отступы вокруг элемента */
-    border: 10px solid silver; /* параметры рамки */
-    border-style: inherit; /* наследует от родителя */
-    border-radius: 5px; /* уголки закруглены*/
-    padding: 5px; /* поля вокруг текста */
+.margin-child {
+  background: white; /* цвет фона */
+  margin: 0px; /* отступы вокруг элемента */
+  border: 10px solid silver; /* параметры рамки */
+  border-style: inherit; /* наследует от родителя */
+  border-radius: 5px; /* уголки закруглены*/
+  padding: 5px; /* поля вокруг текста */
 }
-

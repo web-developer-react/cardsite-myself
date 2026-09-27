@@ -1,105 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- Страница «Myself»: разметка содержимого и подключение нужных ресурсов. -->
+
+<!-- lang: Указывает язык содержимого для произношения и правил обработки текста. -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Настройки документа: кодировка, заголовок, метаданные и подключения ресурсов. -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Задаёт служебные сведения для браузера и поисковых систем. charset: Указывает кодировку документа. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- http-equiv: Задаёт директиву обработки документа через метаданные. content: Содержит значение метаданных, назначение которых задаёт name или http-equiv. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Задаёт служебные сведения для браузера и поисковых систем. name: Задаёт имя передаваемого поля; одинаковое имя объединяет радиокнопки. -->
+    <!-- Задаёт название вкладки браузера. -->
     <title>Myself</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Подключает таблицу стилей по пути из href; относительный путь отсчитывается от HTML-файла. -->
+    <link rel="stylesheet" href="../css/style.css" /> <!-- rel: Объясняет отношение ссылки к текущему документу. href: Указывает адрес перехода или подключаемого ресурса. -->
 
+    <!-- Встроенные CSS-правила для этой страницы. -->
     <style>
-        body{ background-color: yellowgreen; }
-        
-        a{ text-decoration: none; } /* отменяем подчеркивание у ссылки */
+      body {
+        background-color: yellowgreen; /* Цвет заливки фона. */
+      }
 
-        hr{
-            border: none; /* убираем границу для браузера Firefox */
-            height: 10px; /* толщина линии */
-            background-color:rgb(131, 89, 170);
-        }
+      a {
+        text-decoration: none; /* Убирает стандартное подчёркивание ссылок. */
+      } /* отменяем подчеркивание у ссылки */
+
+      hr {
+        border: none; /* убираем границу для браузера Firefox */
+        height: 10px; /* толщина линии */
+        background-color: rgb(131, 89, 170); /* Цвет заливки фона. */
+      }
     </style>
-</head>
-<body class="margin-zero">
+  </head>
+  <!-- Содержит отображаемую страницу и её элементы управления. class: Связывает элемент с CSS-селекторами и поиском в JavaScript. -->
+  <body class="margin-zero">
+    <!-- Шапка страницы или раздела: название и связанные элементы навигации. -->
     <header>
-        <a href="https://apps.skillfactory.ru/" title="Добро пожаловать" target="_blank"><p class="font-header text-align-center" id="font-view-logo">SkillFactory</p></a>
-        <h1 class="font-header text-align-center">Kyryl Petrash</h1>
-        <hr>
+      <!-- Создаёт ссылку; адрес или якорь назначения задаёт href. title: Добавляет текстовую подсказку. target: Выбирает контекст открытия ссылки; _blank открывает новый. -->
+      <a
+        href="https://apps.skillfactory.ru/"
+        title="Добро пожаловать"
+        target="_blank"
+        ><!-- Обозначает отдельный абзац. id: Даёт элементу идентификатор для якоря, подписи, CSS или JavaScript. --><p class="font-header text-align-center" id="font-view-logo"
+          >SkillFactory</p
+        ></a
+      >
+      <!-- Задаёт заголовок первого уровня. -->
+      <h1 class="font-header text-align-center">Kyryl Petrash</h1>
+      <!-- Разделяет темы. -->
+      <hr />
     </header>
 
+    <!-- Основное содержимое страницы. -->
     <main>
-        <div>
-            <h2 style="color: blueviolet;">About myself:</h2>
-            <p style="font-size: 30px; text-align: start;" class="margin-zero">
-                <img src="../images/photo.jpg" alt="photo" width="200" height="250" class="left-img">
-                My name is <b>Kyryll Petrash</b>.
-                Was born in <b>Donetsk</b> in <b>1988 year</b>.<br>
-                My height is <em>183cm</em> and my weight is <em>94kg</em>.<br>
-                I don't drink alcohol.<br>
-                <b><i>I have a conservative outlook on life.</i></b><br>
-            </p>
-            <blockquote style="font-size: 15px; text-align: start;">
-                Чтоб мудро жизнь прожить, знать надобно немало,<br>
-                Два важных правила запомни для начала:<br>
-                Ты лучше голодай, чем что попало есть,<br>
-                И лучше будь один, чем вместе с кем попало.<br>
-            </blockquote>
-            <p>
-                Ницше писал: <q>Человек – это канат, протянутый между животными и сверхчеловеком</q>
-            </p>
-        </div>
+      <!-- Группирует элементы для оформления и работы сценария, не добавляя отдельного смыслового значения. -->
+      <div>
+        <!-- Задаёт заголовок раздела второго уровня. Встроенные стили. color: Задаёт цвет текста; его также могут использовать рамки и значки через currentColor.. -->
+        <h2 style="color: blueviolet">About myself:</h2>
+        <!-- Встроенные стили. font-size: Задаёт размер текста.. text-align: Выравнивает строчное содержимое внутри блока.. -->
+        <p style="font-size: 30px; text-align: start" class="margin-zero">
+          <!-- Подключает изображение; его текстовую замену задаёт alt. src: Указывает адрес загружаемого ресурса. alt: Даёт текстовую замену картинки; пустая строка обозначает декоративное изображение. width: Задаёт ширину в правилах этого элемента; у изображения помогает заранее определить место. height: Задаёт высоту в правилах этого элемента; у изображения помогает заранее определить место. -->
+          <img
+            src="../images/photo.jpg"
+            alt="photo"
+            width="200"
+            height="250"
+            class="left-img"
+          />
+          My name is <!-- Визуально выделяет текст без дополнительной важности. --><b>Kyryll Petrash</b>. Was born in <b>Donetsk</b> in
+          <b>1988 year</b>.<!-- Принудительно переносит строку. --><br />
+          My height is <!-- Ставит смысловое ударение. --><em>183cm</em> and my weight is <em>94kg</em>.<br />
+          I don't drink alcohol.<br />
+          <b><!-- Выделяет текст с особым голосом или термин. --><i>I have a conservative outlook on life.</i></b
+          ><br />
+        </p>
+        <!-- Выделяет самостоятельную цитату. Встроенные стили. font-size: Задаёт размер текста.. -->
+        <blockquote style="font-size: 15px; text-align: start">
+          Чтоб мудро жизнь прожить, знать надобно немало,<br />
+          Два важных правила запомни для начала:<br />
+          Ты лучше голодай, чем что попало есть,<br />
+          И лучше будь один, чем вместе с кем попало.<br />
+        </blockquote>
+        <p>
+          Ницше писал:
+          <!-- Обозначает короткую цитату внутри строки. -->
+          <q
+            >Человек – это канат, протянутый между животными и сверхчеловеком</q
+          >
+        </p>
+      </div>
 
-        <h2 style="color:blueviolet; margin-top: 30px;">Education:</h2>
-        <div>
-            <p style="font-size: 20px; text-align: start;" class="margin-zero">
-                <strong>I am a lawyer by education.</strong>
-            </p>
-        </div>
+      <!-- Встроенные стили. margin-top: Задаёт внешний отступ сверху.. -->
+      <h2 style="color: blueviolet; margin-top: 30px">Education:</h2>
+      <div>
+        <!-- Встроенные стили. font-size: Задаёт размер текста.. -->
+        <p style="font-size: 20px; text-align: start" class="margin-zero">
+          <!-- Подчёркивает важность текста. -->
+          <strong>I am a lawyer by education.</strong>
+        </p>
+      </div>
 
-        <h2 style="color:blueviolet; margin-top: 30px;">Experience:</h2>
-        <div>
-            <p style="font-size: 20px; text-align: start;" class="margin-zero">
-                I have <b>6 years</b> of experience in the field of <i>jurisprudence</i>, as well as <b>4 years</b> in the <i>commercial field</i>.
-            </p>
-        </div>
+      <h2 style="color: blueviolet; margin-top: 30px">Experience:</h2>
+      <div>
+        <p style="font-size: 20px; text-align: start" class="margin-zero">
+          I have <b>6 years</b> of experience in the field of
+          <i>jurisprudence</i>, as well as <b>4 years</b> in the
+          <i>commercial field</i>.
+        </p>
+      </div>
 
-        <h2 style="color:blueviolet; margin-top: 30px;">Hobbies:</h2>
-        <div>
-            <p style="font-size: 20px; text-align: start;" class="margin-zero">
-                In my free time, I am fond of <b>boxing</b> and go to the <b>gym</b>.<br>
-                I also love movies and <b>music</b>, especially <i>English rock music</i>!<br>
-                <a href="https://www.youtube.com/watch?v=YZG7z4FOn0g&list=LL&index=4" title="Click it!" target="_blank">
-                    <span style="color:brown; font-weight: bold;">It`s my music style! Click ME!</span> 
-                </a><br>
-            </p>
-        </div>
+      <h2 style="color: blueviolet; margin-top: 30px">Hobbies:</h2>
+      <div>
+        <p style="font-size: 20px; text-align: start" class="margin-zero">
+          In my free time, I am fond of <b>boxing</b> and go to the
+          <b>gym</b>.<br />
+          I also love movies and <b>music</b>, especially
+          <i>English rock music</i>!<br />
+          <a
+            href="https://www.youtube.com/watch?v=YZG7z4FOn0g&list=LL&index=4"
+            title="Click it!"
+            target="_blank"
+          >
+            <!-- Выделяет часть строки для оформления или обращения из JavaScript. Встроенные стили. color: Задаёт цвет текста; его также могут использовать рамки и значки через currentColor.. font-weight: Задаёт толщину штрихов букв.. -->
+            <span style="color: brown; font-weight: bold"
+              >It`s my music style! Click ME!</span
+            > </a
+          ><br />
+        </p>
+      </div>
 
-        <div>
-            <p style="font-family:sans-serif; font-weight: bold; font-size: 30px; color:blueviolet; margin-top: 30px;">
-                Link to &quot;How I Became a Developer&quot;
-                <a href="../pages/developer.html" title="Click it!" target="_blank">Click ME!</a>   
-            </p>
-        </div>
+      <div>
+        <!-- Встроенные стили. font-family: Перечисляет шрифты по порядку выбора; следующий используется, если предыдущий недоступен.. -->
+        <p
+          style="
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            color: blueviolet;
+            margin-top: 30px;
+          "
+        >
+          Link to &quot;How I Became a Developer&quot;
+          <a href="../pages/developer.html" title="Click it!" target="_blank"
+            >Click ME!</a
+          >
+        </p>
+      </div>
 
-        <h2 style="color:blue; margin-top: 20px;">Contacts:</h2>
-        <div>
-            <address>
-                Written by <a href="mailto:kyrylo.petrash@gmail.com">Kyryll Petrash</a>.<br> <!--malito работает в большинстве браузерах-->
-                Visit us at:<br>
-                Example.com<br>
-                Box 777, Disneyland<br>
-                Tel: +48 22 311 00 00<br>
-                E-mail: kyrylo.petrash@gmail.com<br>
-            </address>
-            <p>
-                Call me from <time>8:00</time> to <time>20:00</time><br>
-                <del>Instagram, Facebook, VK</del>
-            </p>
-        </div>
+      <!-- Встроенные стили. color: Задаёт цвет текста; его также могут использовать рамки и значки через currentColor.. margin-top: Задаёт внешний отступ сверху.. -->
+      <h2 style="color: blue; margin-top: 20px">Contacts:</h2>
+      <div>
+        <!-- Содержит контактные сведения автора или организации. -->
+        <address>
+          Written by
+          <a href="mailto:kyrylo.petrash@gmail.com">Kyryll Petrash</a>.<br />
+          <!--malito работает в большинстве браузерах-->
+          Visit us at:<br />
+          Example.com<br />
+          Box 777, Disneyland<br />
+          Tel: +48 22 311 00 00<br />
+          E-mail: kyrylo.petrash@gmail.com<br />
+        </address>
+        <p>
+          Call me from <!-- Представляет дату или время. --><time>8:00</time> to <time>20:00</time><br />
+          <!-- Отмечает удалённый фрагмент. -->
+          <del>Instagram, Facebook, VK</del>
+        </p>
+      </div>
     </main>
+    <!-- Нижняя часть страницы: дополнительные ссылки и сведения. -->
     <footer class="text-align-center">
-        <hr>
-        <span style="font-size: 30px; color: blueviolet;">&copy;&nbsp;By Petrash</span>
+      <hr />
+      <span style="font-size: 30px; color: blueviolet"
+        >&copy;&nbsp;By Petrash</span
+      >
     </footer>
-</body>
+  </body>
 </html>
